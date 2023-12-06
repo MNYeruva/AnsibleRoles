@@ -17,3 +17,14 @@
     ansible.builtin.command: npm install
     args:
       chdir: /app    
+
+- name: setup application
+  ansible.builtin.import_role:
+    name: common
+    task_from: systemd-setup   
+
+- name: load schema
+  ansible.builtin.import_role:
+    name: common
+    task_from: load-mongo-schema
+ 
