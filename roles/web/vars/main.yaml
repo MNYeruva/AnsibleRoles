@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.mnyeruva.online
+USER_HOST: user.mnyeruva.online
+CART_HOST: cart.mnyeruva.online
+SHIPPING_HOST: shipping.mnyeruva.online
+PAYMENT_HOST: payment.mnyeruva.online

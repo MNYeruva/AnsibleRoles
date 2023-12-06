@@ -17,13 +17,13 @@
   ansible.builtin.command: mv target/shipping-1.0.jar shipping.jar
   args:
     chdir: /app     
+  
+- name: load mysql schema
+  ansible.builtin.import_role:
+    name: common
+    task_from: load-mysql-schema    
 
 - name: start application
   ansible.builtin.import_role:
     name: common
-    task_from: systemd-setup        
-
-- name: load schema
-  ansible.builtin.import_role:
-    name: common
-    task_from: load-mysql-schema       
+    task_from: systemd-setup         
